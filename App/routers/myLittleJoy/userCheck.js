@@ -1,3 +1,4 @@
+require('dotenv').config(); // Carrega as variáveis de ambiente do arquivo .env
 const nodemailer = require('nodemailer');
 
 module.exports = (router) => {
@@ -10,15 +11,15 @@ module.exports = (router) => {
             const transporter = nodemailer.createTransport({
                 service: 'gmail', // Usando o Gmail
                 auth: {
-                    user: 'seu-email@gmail.com', // Seu e-mail
-                    pass: 'sua-senha-de-aplicativo' // Senha de aplicativo gerada
+                    user: process.env.EMAIL_USER, // Usa a variável de ambiente
+                    pass: process.env.EMAIL_PASS  // Usa a variável de ambiente
                 }
             });
 
             // Configuração do e-mail
             const mailOptions = {
                 from: email, // E-mail do remetente
-                to: 'henriqueestrela2004@gmail.com', // E-mail do suporte
+                to: 'henriquecer0@gmail.com', // E-mail do suporte
                 subject: subject,
                 text: message
             };
