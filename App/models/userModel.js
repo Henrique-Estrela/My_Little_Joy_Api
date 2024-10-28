@@ -2,48 +2,48 @@ let users = []; // Array para armazenar usuários em memória
 
 class User {
     constructor(id, name, birthDate, email, password) {
-        this.id = id; // ID fornecido pelo usuário
-        this.name = name; // Nome do usuário
-        this.birthDate = birthDate; // Data de nascimento
-        this.email = email; // Email do usuário
-        this.password = password; // Senha do usuário
+        this.id = id; 
+        this.name = name; 
+        this.birthDate = birthDate; 
+        this.email = email;
+        this.password = password; 
     }
 
     // Método para simular a criação de um usuário
     static async createUser(data) {
-        users.push(data); // Adiciona o usuário ao array
+        users.push(data); 
         console.log("Usuário criado:", data);
-        return data; // Retorna os dados do usuário criado
+        return data; 
     }
 
     // Método para buscar todos os usuários
     static async getAllUsers() {
-        return users; // Retorna todos os usuários
+        return users; 
     }
 
     // Método para buscar um usuário por ID
     static async getUserById(id) {
-        return users.find(user => user.id === id); // Retorna o usuário com o ID correspondente
+        return users.find(user => user.id === id); 
     }
 
     // Método para atualizar um usuário
     static async updateUser(id, updatedData) {
-        const index = users.findIndex(user => user.id === id); // Encontra o índice do usuário
+        const index = users.findIndex(user => user.id === id); 
         if (index !== -1) {
-            users[index] = { ...users[index], ...updatedData }; // Atualiza os dados do usuário
-            return users[index]; // Retorna o usuário atualizado
+            users[index] = { ...users[index], ...updatedData }; 
+            return users[index]; 
         }
-        return null; // Retorna null se o usuário não for encontrado
+        return null; 
     }
 
     // Método para deletar um usuário
     static async deleteUser(id) {
-        const index = users.findIndex(user => user.id === id); // Encontra o índice do usuário
+        const index = users.findIndex(user => user.id === id); 
         if (index !== -1) {
-            const deletedUser = users.splice(index, 1); // Remove o usuário do array
-            return deletedUser[0]; // Retorna o usuário removido
+            const deletedUser = users.splice(index, 1); 
+            return deletedUser[0]; 
         }
-        return null; // Retorna null se o usuário não for encontrado
+        return null; 
     }
 }
 

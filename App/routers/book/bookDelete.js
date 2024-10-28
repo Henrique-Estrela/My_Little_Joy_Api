@@ -1,18 +1,18 @@
-const Book = require('../../models/bookModel'); // Importa o modelo de livro
+const Book = require('../../models/bookModel');
 
 module.exports = (router) => {
     // Rota para deletar um livro
     router.delete('/delete-book/:id', async (req, res) => {
         try {
-            const { id } = req.params; // Obtém o ID do livro a ser deletado
-            const deletedBook = await Book.deleteBook(id); // Deleta o livro
+            const { id } = req.params; 
+            const deletedBook = await Book.deleteBook(id); 
             if (deletedBook) {
-                res.status(200).json({ message: "Livro deletado com sucesso!" }); // Retorna mensagem de sucesso
+                res.status(200).json({ message: "Livro deletado com sucesso!" }); 
             } else {
-                res.status(404).json({ message: "Livro não encontrado" }); // Retorna erro se não encontrado
+                res.status(404).json({ message: "Livro não encontrado" }); 
             }
         } catch (error) {
-            res.status(400).json({ message: error.message }); // Resposta de erro
+            res.status(400).json({ message: error.message }); 
         }
     });
 };

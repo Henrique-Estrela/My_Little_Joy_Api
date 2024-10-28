@@ -1,14 +1,15 @@
-const User = require('../../models/userModel'); // Importa o modelo de usuário
+const User = require('../../models/userModel'); 
 
 module.exports = (router) => {
+    // Rota para registrar um usuário
     router.post('/register-user', async (req, res) => {
         try {
-            const { id, name, birthDate, email, password } = req.body; // Obtém os dados do corpo da requisição
-            const newUser = new User(id, name, birthDate, email, password); // Cria uma nova instância do usuário
-            await User.createUser(newUser); // Chama o método para criar o usuário
-            res.status(201).send("Usuário registrado com sucesso!"); // Resposta de sucesso
+            const { id, name, birthDate, email, password } = req.body; 
+            const newUser = new User(id, name, birthDate, email, password); 
+            await User.createUser(newUser); 
+            res.status(201).send("Usuário registrado com sucesso!"); 
         } catch (error) {
-            res.status(400).json({ message: error.message }); // Resposta de erro
+            res.status(400).json({ message: error.message }); 
         }
     });
 };

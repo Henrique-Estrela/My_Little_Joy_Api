@@ -1,11 +1,11 @@
-const Bookcase = require('../../models/bookcaseModel'); // Importa o modelo de estante
-const Book = require('../../models/bookModel'); // Importa o modelo de livro
-const User = require('../../models/userModel'); // Importa o modelo de usuário
+const Bookcase = require('../../models/bookcaseModel'); 
+const Book = require('../../models/bookModel');
+const User = require('../../models/userModel'); 
 
 module.exports = (router) => {
     router.post('/register-bookcase', async (req, res) => {
         try {
-            const { id, bookId, userId } = req.body; // Obtém os dados do corpo da requisição
+            const { id, bookId, userId } = req.body; 
 
             // Verifica se o livro e o usuário existem
             const bookExists = await Book.getBookById(bookId);
@@ -15,11 +15,11 @@ module.exports = (router) => {
                 return res.status(400).json({ message: "Livro ou usuário não encontrados." });
             }
 
-            const newBookcase = new Bookcase(id, bookId, userId); // Cria uma nova instância da estante
-            await Bookcase.createBookcase(newBookcase); // Chama o método para criar a estante
-            res.status(201).send("Estante registrada com sucesso!"); // Resposta de sucesso
+            const newBookcase = new Bookcase(id, bookId, userId); 
+            await Bookcase.createBookcase(newBookcase); 
+            res.status(201).send("Estante registrada com sucesso!"); 
         } catch (error) {
-            res.status(400).json({ message: error.message }); // Resposta de erro
+            res.status(400).json({ message: error.message }); 
         }
     });
 

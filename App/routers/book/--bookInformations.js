@@ -1,3 +1,6 @@
+const Book = require('../../models/bookModel'); 
+
+
 module.exports = (router) => {
     router.get('/info-book', async (req, res) => {
         try {

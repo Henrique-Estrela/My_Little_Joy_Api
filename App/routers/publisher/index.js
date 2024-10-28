@@ -8,10 +8,6 @@ let publisherEdit = require('./publisherEdit');
 let publisherRegister = require('./publisherRegister');
 let publisherSearch = require('./publisherSearch');
 
-// router.delete('/delete', publisherDelete);
-// router.put('/edit', publisherEdit);
-// router.post('/register', publisherRegister);
-// router.get('/search', publisherSearch);
 
 // Use o roteador de registro de autor
 publisherDelete(router); // Certifique-se de que isso está correto
@@ -21,5 +17,5 @@ publisherSearch(router);
 
 // Exporte o roteador
 module.exports = (app) => {
-    app.use('/publishers', router); // Define o prefixo da rota
+    app.use('/publishers', router); 
 };

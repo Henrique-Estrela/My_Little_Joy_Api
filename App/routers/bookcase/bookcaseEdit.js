@@ -1,19 +1,19 @@
-const Bookcase = require('../../models/bookcaseModel'); // Importa o modelo de estante
+const Bookcase = require('../../models/bookcaseModel'); 
 
 module.exports = (router) => {
     // Rota para editar uma estante
     router.put('/edit-bookcase/:id', async (req, res) => {
         try {
-            const { id } = req.params; // Obtém o ID da estante a ser editada
-            const updatedData = req.body; // Obtém os dados atualizados do corpo da requisição
-            const updatedBookcase = await Bookcase.updateBookcase(id, updatedData); // Atualiza a estante
+            const { id } = req.params; 
+            const updatedData = req.body; 
+            const updatedBookcase = await Bookcase.updateBookcase(id, updatedData); 
             if (updatedBookcase) {
-                res.status(200).json(updatedBookcase); // Retorna a estante atualizada
+                res.status(200).json(updatedBookcase); 
             } else {
-                res.status(404).json({ message: "Estante não encontrada" }); // Retorna erro se não encontrada
+                res.status(404).json({ message: "Estante não encontrada" });
             }
         } catch (error) {
-            res.status(400).json({ message: error.message }); // Resposta de erro
+            res.status(400).json({ message: error.message }); 
         }
     });
 };

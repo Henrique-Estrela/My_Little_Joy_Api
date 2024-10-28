@@ -1,18 +1,18 @@
-const Author = require('../../models/authorModel'); // Importa o modelo de autor
+const Author = require('../../models/authorModel'); 
 
 module.exports = (router) => {
     // Rota para deletar um autor
     router.delete('/delete-author/:id', async (req, res) => {
         try {
-            const { id } = req.params; // Obtém o ID do autor a ser deletado
-            const deletedAuthor = await Author.deleteAuthor(id); // Deleta o autor
+            const { id } = req.params; 
+            const deletedAuthor = await Author.deleteAuthor(id);
             if (deletedAuthor) {
-                res.status(200).json({ message: "Autor deletado com sucesso!" }); // Retorna mensagem de sucesso
+                res.status(200).json({ message: "Autor deletado com sucesso!" }); 
             } else {
-                res.status(404).json({ message: "Autor não encontrado" }); // Retorna erro se não encontrado
+                res.status(404).json({ message: "Autor não encontrado" }); 
             }
         } catch (error) {
-            res.status(400).json({ message: error.message }); // Resposta de erro
+            res.status(400).json({ message: error.message }); 
         }
     });
 };

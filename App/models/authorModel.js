@@ -1,48 +1,48 @@
-let authors = []; // Array para armazenar autores em memória
+let authors = []; 
 
 class Author {
     constructor(id, name, description, nationality) {
-        this.id = id; // ID fornecido pelo usuário
+        this.id = id; 
         this.name = name;
         this.description = description;
-        this.nationality = nationality; // Adicionando nacionalidade
+        this.nationality = nationality; 
     }
 
     // Método para simular a criação de um autor
     static async createAuthor(data) {
-        authors.push(data); // Adiciona o autor ao array
+        authors.push(data); 
         console.log("Autor criado:", data);
-        return data; // Retorna os dados do autor criado
+        return data; 
     }
 
     // Método para buscar todos os autores
     static async getAllAuthors() {
-        return authors; // Retorna todos os autores
+        return authors; 
     }
 
     // Método para buscar um autor por ID
     static async getAuthorById(id) {
-        return authors.find(author => author.id === id); // Retorna o autor com o ID correspondente
+        return authors.find(author => author.id === id); 
     }
 
     // Método para atualizar um autor
     static async updateAuthor(id, updatedData) {
-        const index = authors.findIndex(author => author.id === id); // Encontra o índice do autor
+        const index = authors.findIndex(author => author.id === id); 
         if (index !== -1) {
-            authors[index] = { ...authors[index], ...updatedData }; // Atualiza os dados do autor
-            return authors[index]; // Retorna o autor atualizado
+            authors[index] = { ...authors[index], ...updatedData };
+            return authors[index]; 
         }
-        return null; // Retorna null se o autor não for encontrado
+        return null;
     }
 
     // Método para deletar um autor
     static async deleteAuthor(id) {
-        const index = authors.findIndex(author => author.id === id); // Encontra o índice do autor
+        const index = authors.findIndex(author => author.id === id); 
         if (index !== -1) {
-            const deletedAuthor = authors.splice(index, 1); // Remove o autor do array
-            return deletedAuthor[0]; // Retorna o autor removido
+            const deletedAuthor = authors.splice(index, 1); 
+            return deletedAuthor[0]; 
         }
-        return null; // Retorna null se o autor não for encontrado
+        return null; 
     }
 }
 

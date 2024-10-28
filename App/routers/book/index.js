@@ -10,15 +10,8 @@ let bookRegister = require('./bookRegister');
 let bookSearch = require('./bookSearch');
 let bookSearchId = require('./bookSearchId');
 
-// router.delete('/delete', bookDelete);
-// router.put('/edit', bookEdit);
-// router.get('/info', bookInfo);
-// router.post('/register', bookRegister);
-// router.get('/search', bookSearch);
-// router.get('/search/:id', bookSearchId);
-
 // Use o roteador de registro de autor
-bookDelete(router); // Certifique-se de que isso está correto
+bookDelete(router); 
 bookEdit(router);
 bookInformation(router);
 bookRegister(router);
@@ -27,5 +20,5 @@ bookSearchId(router);
 
 // Exporte o roteador
 module.exports = (app) => {
-    app.use('/books', router); // Define o prefixo da rota
+    app.use('/books', router); 
 };

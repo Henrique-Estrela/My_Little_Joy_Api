@@ -4,10 +4,10 @@ module.exports = (router) => {
     // Rota para buscar todos os autores
     router.get('/search-author', async (req, res) => {
         try {
-            const authors = await Author.getAllAuthors(); // Busca todos os autores
-            res.status(200).json(authors); // Retorna a lista de autores
+            const authors = await Author.getAllAuthors(); 
+            res.status(200).json(authors);
         } catch (error) {
-            res.status(400).json({ message: error.message }); // Resposta de erro
+            res.status(400).json({ message: error.message });
         }
     });
 };

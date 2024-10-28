@@ -7,16 +7,11 @@ let myLittleJoySendEmail = require('./SendEmail');
 let myLittleJoyUserCheck = require('./userCheck');
 
 
-
-// router.get('/filter', myLittleJoyFilter);
-// router.get('/register', myLittleJoyRegister);
-
-
 // Use o roteador de registro de autor
-myLittleJoySendEmail(router); // Certifique-se de que isso está correto
+myLittleJoySendEmail(router); 
 myLittleJoyUserCheck(router);
 
 // Exporte o roteador
 module.exports = (app) => {
-    app.use('/MLJ', router); // Define o prefixo da rota
+    app.use('/MLJ', router); 
 };
