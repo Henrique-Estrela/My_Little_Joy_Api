@@ -3,7 +3,7 @@ const router = express.Router();
 
 // Importa o arquivo de registro de autor
 
-let myLittleJoySendEmail = require('./SendEmail');
+let myLittleJoySendEmail = require('./suporte');
 let myLittleJoyUserCheck = require('./userCheck');
 
 
