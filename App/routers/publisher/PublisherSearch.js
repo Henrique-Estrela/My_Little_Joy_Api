@@ -1,4 +1,4 @@
-const Publisher = require('../../models/publisherModel'); // Importa o modelo de editora
+const Publisher = require('../../controllers/publisherController'); // Importa o modelo de editora
 
 module.exports = (router) => {
     // Rota para procurar editoras

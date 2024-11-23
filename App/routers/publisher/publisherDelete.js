@@ -1,4 +1,4 @@
-const Publisher = require('../../models/publisherModel'); 
+const Publisher = require('../../controllers/publisherController'); 
 
 module.exports = (router) => {
         // Rota para deletar uma editora

@@ -1,4 +1,4 @@
-const Author = require('../../models/authorModel'); // Importa o modelo de autor
+const Author = require('../../controllers/authorController'); // Importa o modelo de autor
 
 module.exports = (router) => {
     // Rota para buscar todos os autores

@@ -1,4 +1,4 @@
-const User = require('../../models/userModel'); // Importa o modelo de usuário
+const User = require('../../controllers/userController'); // Importa o modelo de usuário
 
 module.exports = (router) => {
     // Rota para verificar se o usuário é ele mesmo

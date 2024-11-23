@@ -1,4 +1,4 @@
-const Book = require('../../models/bookModel'); 
+const Book = require('../../controllers/bookController'); 
 module.exports = (router) => {
     // Rota para buscar um livro por ID
     router.get('/search-book/:id', async (req, res) => {

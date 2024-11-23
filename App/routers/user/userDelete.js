@@ -1,4 +1,9 @@
-const User = require('../../models/userModel'); 
+const User = require('../../controllers/userController'); 
+
+
+
+
+
 
 module.exports = (router) => {
     // Rota para deletar um usuário

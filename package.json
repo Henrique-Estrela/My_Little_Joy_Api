@@ -1,8 +1,19 @@
 {
+  "name": "My_Little_Joy",
+  "version": "1.0.0",
+  "description": "My Little Joy é o cantinho perfeito para quem ama livros e quer manter todas as suas leituras organizadas de maneira especial. Imagine uma estante de livros virtual, onde você pode guardar e redescobrir as histórias que marcaram sua jornada. Aqui, cada livro lido é um tesouro, e você tem a oportunidade de criar uma coleção única, do seu jeito. ",
+  "main": "App.js",
+  "scripts": {
+    "start": "node App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "module": "^1.2.5",
-    "nodemailer": "^6.9.15"
+    "mysql2": "^3.11.4",
+    "nodemailer": "^6.9.15",
+    "sequelize": "^6.37.5"
   }
 }

@@ -1,6 +1,6 @@
-const Bookcase = require('../../models/bookcaseModel'); 
-const Book = require('../../models/bookModel');
-const User = require('../../models/userModel'); 
+const Bookcase = require('../../controllers/bookcaseController'); 
+const Book = require('../../controllers/bookController');
+const User = require('../../controllers/userController'); 
 
 module.exports = (router) => {
     router.post('/register-bookcase', async (req, res) => {

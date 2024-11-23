@@ -1,4 +1,4 @@
-const Author = require('../../models/authorModel'); 
+const Author = require('../../controllers/authorController'); 
 
 module.exports = (router) => {
     // Rota para editar um autor

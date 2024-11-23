@@ -1,4 +1,4 @@
-const User = require('../../models/userModel'); 
+const User = require('../../controllers/userController'); 
 
 module.exports = (router) => {
     // Rota para editar um usuário

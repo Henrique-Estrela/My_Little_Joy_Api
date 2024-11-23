@@ -1,4 +1,4 @@
-const Bookcase = require('../../models/bookcaseModel'); 
+const Bookcase = require('../../controllers/bookcaseController'); 
 
 module.exports = (router) => {
     // Rota para editar uma estante
