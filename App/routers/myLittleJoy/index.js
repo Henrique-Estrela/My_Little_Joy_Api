@@ -3,7 +3,9 @@ const express = require('express');
 const router = express.Router();
 
 
-router.post('/login', User.login); 
+const suport = require('./suporte');
+suport(router)
+
 
 
 // Exporte o roteador
