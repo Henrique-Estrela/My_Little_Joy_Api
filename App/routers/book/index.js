@@ -1,6 +1,6 @@
 const bookController = require('../../controllers/bookController');
-const authMiddleware = require('../../middleware/authMiddleware'); // Importando o middleware
-const uniqueAuthMiddleware = require('../../middleware/uniqueAuthMiddleware'); // Middleware para autenticação única
+const authMiddleware = require('../../Middleware/authMiddleware'); // Importando o middleware
+const uniqueAuthMiddleware = require('../../Middleware/uniqueAuthMiddleware'); // Middleware para autenticação única
 
 const express = require('express');
 const router = express.Router();
