@@ -1,15 +1,10 @@
+const User = require('../../controllers/userController'); // Importa o controlador de usuário
 const express = require('express');
 const router = express.Router();
 
-// Importa o arquivo de registro de autor
 
-let myLittleJoySendEmail = require('./suporte');
-let myLittleJoyUserCheck = require('./userCheck');
+router.post('/login', User.login); 
 
-
-// Use o roteador de registro de autor
-myLittleJoySendEmail(router); 
-myLittleJoyUserCheck(router);
 
 // Exporte o roteador
 module.exports = (app) => {

@@ -1,8 +1,8 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/conexao');
 
-const User = sequelize.define('User', {
-  id: {
+const Author = sequelize.define('Author', {
+  idAutor: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
@@ -11,22 +11,17 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING(200),
     allowNull: false,
   },
-  dataNascimento: {
-    type: DataTypes.DATE,
-    allowNull: false,
+  descricao: {
+    type: DataTypes.STRING(500),
+    allowNull: true,
   },
-  email: {
-    type: DataTypes.STRING(255),
-    allowNull: false,
-    unique: true,
-  },
-  senha: {
-    type: DataTypes.STRING(255),
-    allowNull: false,
-  },
+  nacionalidade: {
+    type: DataTypes.STRING(200),
+    allowNull: true,
+  }
 }, {
-  tableName: 'user', 
+  tableName: 'autor', 
   timestamps: false,    // Não criar `createdAt` e `updatedAt` automaticamente
 });
 
-module.exports = User;
+module.exports = Author;

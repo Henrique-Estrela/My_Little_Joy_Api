@@ -1,9 +1,11 @@
 const { Sequelize } = require('sequelize');
+require('dotenv').config(); 
+
 
 // Configuração da conexão
-const sequelize = new Sequelize('mlj', 'root', 'Henrique2004#', {
-  host: 'localhost', 
-  dialect: 'mysql', 
+const sequelize = new Sequelize(process.env.BD_NAME, process.env.BD_USER, process.env.BD_PASS, {
+  host: process.env.BD_HOST, 
+  dialect: process.env.TYPE_BD, 
 });
 
 // Testar a conexão
