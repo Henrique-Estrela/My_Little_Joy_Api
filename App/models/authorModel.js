@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database/conexao');
 
+
 const Author = sequelize.define('Author', {
   idAutor: {
     type: DataTypes.INTEGER,

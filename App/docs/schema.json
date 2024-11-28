@@ -1,0 +1,108 @@
+{
+    "User": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "integer"
+            },
+            "nome": {
+                "type": "string"
+                
+            },
+            "dataNascimento": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string"
+            },
+            "senha": {
+                "type": "string"
+            }
+        },
+        "required": ["nome", "dataNascimento", "email", "senha"]    
+    },
+    "Author": {
+            "type": "object",
+            "properties": {
+               "idAutor": {
+                   "type": "integer"
+               },
+               "nome": {
+                   "type": "string"
+               },
+               "descricao": {
+                   "type": "string"
+               },
+               "nacionalidade": {
+                   "type": "string"
+               }
+            },
+            "required": ["nome"]
+    },
+    "Book": {        
+            "type": "object",
+            "properties": {
+               "idLivro": {
+                   "type": "integer"
+               },
+               "titulo": {
+                   "type": "string"
+               },
+               "ano": {
+                   "type": "integer"
+               },
+               "paginas": {
+                   "type": "integer"
+               },
+               "ranking": {
+                   "type": "integer"
+               },
+               "avaliacao": {
+                   "type": "integer"
+               },
+               "Autor_idAutor": {
+                   "type": "integer"
+               },
+               "Genero_idGenero": {
+                   "type": "integer"
+               },
+               "Editora_idEditora": {
+                   "type": "integer"
+               }
+            },
+            "required": ["titulo", "ano", "paginas"]
+       },
+       "Bookcase":{
+            "type": "object",
+            "properties": {
+               "id": {
+                   "type": "integer"
+               },
+               "idBook": {
+                   "type": "integer"
+               },
+               "idUser": {
+                   "type": "integer"
+               }
+            },
+            "required": ["idBook", "idUser"]
+       },
+        "Publisher": {        
+            "type": "object",
+            "properties": {
+               "idEditora": {
+                   "type": "integer"
+               },
+               "nome": {
+                   "type": "string"
+               },
+               "descricao": {
+                   "type": "string"
+               }
+            },
+           "required": ["nome"]
+       }
+    
+    
+    
+}

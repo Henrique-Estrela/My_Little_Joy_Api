@@ -1,10 +1,19 @@
 const express = require('express');
 const sequelize = require('./App/database/conexao'); // Configuração do Sequelize
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./App/docs/documentation');
 
-var app = express();
+const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+
+
+
+
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 try {
     
@@ -35,6 +44,8 @@ try {
             app.listen(PORT, () => {
                 console.log(`Servidor rodando na porta ${PORT}`)
             });
+            console.log('Documentação disponível em http://localhost:3000/api-docs');
+
         } catch (error) {
             console.error('Erro ao conectar ao banco de dados:', error);
         }
