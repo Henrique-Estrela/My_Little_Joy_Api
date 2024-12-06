@@ -8,11 +8,18 @@
 Uma API RESTful para gerenciar um sistema de biblioteca, permitindo a criação, leitura, atualização e exclusão de usuários, autores, livros, editoras e estantes de livros.
 
 ## Funcionalidades
-- Gerenciamento de usuários
-- Gerenciamento de autores
-- Gerenciamento de livros
-- Gerenciamento de editoras
-- Gerenciamento de estantes de livros
+- **Gerenciamento de Usuários**
+  - Criar, buscar, atualizar e deletar usuários.
+- **Gerenciamento de Autores**
+  - Criar, buscar, atualizar e deletar autores.
+- **Gerenciamento de Livros**
+  - Criar, buscar, atualizar e deletar livros.
+- **Gerenciamento de Editoras**
+  - Criar, buscar, atualizar e deletar editoras.
+- **Gerenciamento de Estantes de Livros**
+  - Criar, buscar, atualizar e deletar estantes de livros.
+  - Filtrar estantes de livros por usuário.
+  - Contar o número de estantes de livros de um usuário.
 
 ## Tecnologias Utilizadas
 - Node.js
@@ -75,11 +82,64 @@ A API está disponível em `http://localhost:3000`. Aqui estão alguns exemplos 
       "titulo": "Harry Potter e a Pedra Filosofal",
       "ano": 1997,
       "paginas": 223,
+      "ranking": 5,
+      "avaliacao": 4,
       "Autor_idAutor": 1,
-      "Genero_idGenero": 1,
+      "Genero_idGenero": 2,
       "Editora_idEditora": 1
     }
     ```
+
+- **Buscar Todos os Livros**
+  - **Endpoint:** `GET /books`
+
+- **Buscar Livro por ID**
+  - **Endpoint:** `GET /books/{id}`
+
+- **Buscar Livro por Título**
+  - **Endpoint:** `GET /books/name/{titulo}`
+
+### Editoras
+
+- **Criar Editora**
+  - **Endpoint:** `POST /publishers/create`
+  - **Body:**
+    ```json
+    {
+      "nome": "Editora Globo",
+      "descricao": "Editora brasileira especializada em livros e revistas."
+    }
+    ```
+
+- **Buscar Todas as Editoras**
+  - **Endpoint:** `GET /publishers`
+
+- **Buscar Editora por ID**
+  - **Endpoint:** `GET /publishers/{id}`
+
+### Estantes de Livros
+
+- **Criar Estante de Livro**
+  - **Endpoint:** `POST /bookcases/create`
+  - **Body:**
+    ```json
+    {
+      "idBook": 1,
+      "idUser": 1
+    }
+    ```
+
+- **Buscar Todas as Estantes de Livros**
+  - **Endpoint:** `GET /bookcases/getAll`
+
+- **Buscar Estante de Livro por ID**
+  - **Endpoint:** `GET /bookcases/{id}`
+
+- **Contar Estantes de Livros de um Usuário**
+  - **Endpoint:** `GET /bookcases/count/{idUser}`
+
+- **Filtrar Estantes de Livros de um Usuário**
+  - **Endpoint:** `GET /bookcases/filter/{idUser}`
 
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request ou relatar problemas.
@@ -88,4 +148,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request 
 Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ## Contato
-Para mais informações, entre em contato com [Henriqueestrela2004@gmail.com](mailto:Henriqueestrela2004@gmail.com).
+Para mais informações, entre em contato com [seu_email@example.com](mailto:seu_email@example.com).
