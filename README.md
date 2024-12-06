@@ -1,9 +1,9 @@
 # My Little Joy API
 
 ## Última Versão
-[![Packagist](https://img.shields.io/packagist/v/your-username/my-little-joy-api.svg)](https://packagist.org/packages/your-username/my-little-joy-api)
+[![Packagist](https://img.shields.io/packagist/v/Henrique-Estrela/my-little-joy-api.svg)](https://packagist.org/packages/Henrique-Estrela/my-little-joy-api)
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
-[![Total Downloads](https://img.shields.io/packagist/dt/your-username/my-little-joy-api.svg)](https://packagist.org/packages/your-username/my-little-joy-api)
+[![Total Downloads](https://img.shields.io/packagist/dt/Henrique-Estrela/my-little-joy-api.svg)](https://packagist.org/packages/Henrique-Estrela/my-little-joy-api)
 
 Uma API RESTful para gerenciar um sistema de biblioteca, permitindo a criação, leitura, atualização e exclusão de usuários, autores, livros, editoras e estantes de livros.
 
